@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 class CustomElevatedButton extends StatelessWidget {
   CustomElevatedButton({
     this.child,
-    this.color,
+    this.color: Colors.white,
     this.borderRadius = 8.0,
     this.onPressed,
-  });
+  }) : assert(borderRadius != null);
   final Widget child;
-  final Widget color;
+  final Color color;
   final double borderRadius;
   final VoidCallback onPressed;
 
@@ -39,7 +39,7 @@ class CustomElevatedButton extends StatelessWidget {
               return Colors.grey[200];
             }
 
-            return Colors.white; // Use the component's default.
+            return color; // Use the component's default.
           },
         ),
       ),

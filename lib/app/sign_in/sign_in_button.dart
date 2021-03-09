@@ -1,17 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:time_tracker_flutter_course/common_widgets/custom_elevated_button.dart';
-import 'package:flutter/material.dart';
 
 class SignInButton extends CustomElevatedButton {
   SignInButton({
-    String text,
-    Widget color,
-    Color textColor,
+    @required String text,
+    Color color = Colors.white,
+    Color textColor = Colors.black87,
     VoidCallback onPressed,
-  }) : super(
+  })  : assert(text != null),
+        super(
           child: Text(
             text,
-            style: TextStyle(color: textColor, fontSize: 15),
+            style: TextStyle(
+              color: textColor,
+              fontWeight: FontWeight.w600,
+              fontSize: 18,
+            ),
           ),
           color: color,
           onPressed: onPressed,
