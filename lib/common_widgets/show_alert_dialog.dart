@@ -12,6 +12,7 @@ Future<bool> showAlertDialog(
 }) {
   if (!Platform.isIOS) {
     return showDialog(
+      barrierDismissible: false,
       context: context,
       builder: (context) => AlertDialog(
         title: Text(title),
