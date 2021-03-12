@@ -33,6 +33,7 @@ dependencies:
   google_sign_in: ^5.0.0
   flutter_login_facebook: ^1.0.0
   provider: ^5.0.0
+  cloud_firestore: ^1.0.1
 
 dev_dependencies:
   flutter_test:
